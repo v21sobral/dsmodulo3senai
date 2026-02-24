@@ -33,9 +33,16 @@ public class Questao6 {
                     break;
 
                 case 2:
-                    System.out.print("Informe o número inicial para a contagem regressiva (>=0): ");
+                    System.out.print("Informe o número inicial para a contagem regressiva (maior igual a 0): ");
                     if (!sc.hasNextInt()) {
                         System.out.println("Entrada inválida.");
+                        try {
+                            // 1000 milissegundos = 1 segundo de pausa
+                            Thread.sleep(3000); 
+                        } catch (InterruptedException e) {
+                            // Caso o sistema interrompa a pausa, ele limpa o erro
+                            Thread.currentThread().interrupt();
+                        }
                         sc.next();
                         break;
                     }
@@ -47,11 +54,26 @@ public class Questao6 {
                     System.out.println("Contagem regressiva:");
                     for (int i = inicio; i >= 0; i--) {
                         System.out.println(i);
+                        try {
+                            // Aguarda 1 segundo antes de imprimir o próximo número
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
                     }
                     break;
 
                 case 0:
-                    System.out.println("Saindo...");
+                    System.out.print("Saindo");
+                    for (int i = 0; i < 3; i++) {
+                        try {
+                            Thread.sleep(500); // 500 milissegundos entre cada ponto
+                            System.out.print(".");
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    System.out.println(); // Pula uma linha após os pontos
                     sc.close();
                     return;
 
