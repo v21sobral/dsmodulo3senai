@@ -2,57 +2,35 @@
 public class Camisa {
     private String cor;
     private String tamanho;
-    private String tipo;
+    private double preco;
 
-    public Camisa(String cor, String tamanho, String tipo){
+    public Camisa(String cor, String tamanho, double preco) {
         this.cor = cor;
-        this.tamanho = tamanho; 
-        this.tipo = tipo;
+        this.tamanho = tamanho;
+        this.preco = preco;
     }
 
-    public String getCor(){
+    public String getCor() {
         return cor;
     }
 
-    public String getTamanho(){
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getTamanho() {
         return tamanho;
     }
 
-    public String getTipo(){
-        return tipo;
- private String marca;
-    private String modelo;
-    private int anoFabricacao;
-
-    public Camisa(String marca, String modelo, int anoFabricacao) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 
-    public String getMarca(){
-        return marca;
+    public double getPreco() {
+        return preco;
     }
 
-    public String getModelo() {
-        return modelo;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
-
-    public int getAnoFabricacao() {
-        return anoFabricacao;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public void setAnoFabricacao(int anoFabricacao) {
-        this.anoFabricacao = anoFabricacao;
-    }
-
-    
-    
+}
