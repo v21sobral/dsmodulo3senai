@@ -20,7 +20,7 @@ public class FuncionarioGerente extends Funcionario {
     public void exibirDados() {
         System.out.println("Nome: " + getNome());
         System.out.println("Cargo: Gerente");
-        System.out.println("Salário: " + getSalario());
+        System.out.println("Salário: " + getSalario() + " + bônus de " + BONUS);
         System.out.println("Departamento: " + getDepartamento());
     }
     

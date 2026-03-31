@@ -18,7 +18,7 @@ public class FuncionarioTecnico extends Funcionario {
     public void exibirDados() {
         System.out.println("Nome: " + getNome());
         System.out.println("Cargo: Técnico");
-        System.out.println("Salário: " + getSalario());
+        System.out.println("Salário: " + getSalario() + " + bônus de " + BONUS);
         System.out.println("Especialidade: " + getEspecialidade());
     }
 }
