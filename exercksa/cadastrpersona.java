@@ -94,9 +94,7 @@ public class cadastrpersona {
                     nomes.remove(posRemover);
                     System.out.println("Nome removido com sucesso!");
                     break;
-                case 0:
-                    System.out.println("Saindo...");
-                    break;
+               
             }
         }
         sc.close();
